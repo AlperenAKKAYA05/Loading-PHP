@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>LOADING</title>
+</head>
+<body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#check").load("loading.php");
+var refreshId = setInterval(function() {
+$("#check").load('loading.php?randval='+ Math.random());
+}, 1000); // 1 check data every second
+});
+</script>
+
+<div id="check"></div>
+
+</body>
+</html>
